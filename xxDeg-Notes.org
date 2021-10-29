@@ -1,0 +1,34 @@
+Change log for xxDeg
+* Version 0.8.13
+  + 35 ::  Changed fit.iore in IOREfit.R so that d1 is caluclated
+           fromd dsort, and it thus sorted, rather than from day,
+           which is unsorted. This resulted in inconsistencies in
+           calculating the initial starting guess which could lead to
+           inconsistencies in the final result.
+  + degPlot :: There were untracked changes in degPlot.R related to the residuals
+* Version 0.8.13 +
+  + commit 8c8dc79b5770e0dd0938df309ad25c1b2a857f85 <2015-11-12 Thu>
+  + <2015-05-15 Fri> Two changes to
+    1. Not calculate the FOCUS chi squared value when there are too
+       few unique times
+    2. Not calculate the residual spline when there are too few unique
+       times.
+  + <2015-11-12 Thu> One additional change
+    1. removed /trace = TRUE/ from an nls call in IOREfit.R to reduce
+       the amout of stuff printed to the screen
+* Version 0.8.13 ++
+  + <2015-11-12 Thu>
+    1. added an option (/draw/) to not draw the plot to the function
+       /degPlot/, defaulting to TRUE
+    2. Fixed the feature above to draw splines only with sufficient
+       unique x values so that it counts the x values correctly.
+       (Originally the call to unique was outside the call to is.na,
+       leading it to count unique values of a boolean.)
+  + <2015-11-17 Tue>
+    1. Added /degeval/ function to generate a data frame of fitted
+       curves from a fit object. This is a helper function and does
+       not have the @export tag for roxygen2
+    2. Added a /gdegplot/ function for making a ggplot2 version of the
+       data and three curve fits from a (named) list of fits. This
+       allows inserting a faceted plot in a document or jupyter
+       notebook.

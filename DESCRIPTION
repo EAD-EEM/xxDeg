@@ -1,0 +1,12 @@
+Package: xxDeg
+Type: Package
+Title: Title: Fit three models to pesticide degradation data
+Version: 0.8.13
+Author: Ian Kennedy
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Functions for fitting pesticide degradation studies to
+             three standard functions, and calculating a
+             representative half-life
+License: GPL-3
+Encoding: UTF-8
+LazyData: true

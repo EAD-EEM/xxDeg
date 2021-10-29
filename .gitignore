@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.pdf
+*~
+Git Bash.vbs
+.RHistory
+xxDeg
+xxDeg.Rcheck
+#*#
+*.xlsx
+testdfop.R
